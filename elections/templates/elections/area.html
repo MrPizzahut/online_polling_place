@@ -1,0 +1,41 @@
+{% extends "elections/layout.html" %}
+{% block title %}
+{{area}}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+<h1>{{area}}</h1>
+<br>
+    {% if poll %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <td><B>name</B></td>
+            <td><B>introduction</B></td>
+            <td><B>party number</B></td>
+            <td><B>vote</B></td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for candidate in candidates %}
+        <tr>
+            <td> {{candidate.name}}</td>
+            <td> {{candidate.introduction}}</td>
+            <td> {{candidate.party_number}}</td>
+            <td>
+                <form action = "/polls/{{poll.id}}/" method="post">
+                    {% csrf_token %}
+                    <button name="choice" value="{{candidate.id}}">select</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    There is no opinion poll or There is more than one poll in the same area.
+    {% endif %}
+</div>
+{% endblock %}
