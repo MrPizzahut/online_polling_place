@@ -25,7 +25,7 @@ SECRET_KEY = 'sis1&rv8$xan8a+63h8l(od#+tiakm)hf7yq293ob!(+15wa3('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['online-polling-place-mrpizza.c9users.io']
+ALLOWED_HOSTS = ['ec2-54-238-210-5.ap-northeast-1.compute.amazonaws.com']
 
 
 # Application definition
