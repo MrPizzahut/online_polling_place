@@ -1,6 +1,5 @@
 # online_polling_place-amazon   Python and Django 
-http://54.238.210.5:8000/admin/  <--This is admin page(id:root, pw:mrpizza1)
 
-http://54.238.210.5:8000/
+This one is not on webserver becuase to run this one on server, i have to use Linux screen tool and it make server keep running even if Nobody use the program. Therefore I had to shut down this on grounds of cost.
 
  Python and Django 
